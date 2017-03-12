@@ -1,0 +1,19 @@
+import random
+num=1000
+a=0
+for i in range(0,num):
+    door_list = ['A','B','C']
+    answer = random.choice(door_list)
+    choice = random.choice(door_list)
+    door_list.remove(answer)
+    if answer != choice:
+        door_list.remove(choice)
+    monty_open = random.choice(door_list)
+    #print("Monty opens",monty_open)
+    door_list = ['A','B','C']
+    door_list.remove(monty_open)
+    door_list.remove(choice)
+    switch=door_list[0]
+    if switch == answer:
+        a+=1
+print ("Switching is advantageous with",a/num)
