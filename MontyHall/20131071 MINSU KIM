@@ -1,0 +1,18 @@
+import random
+door = ['G', 'G', 'C']
+s=0
+f=0
+for i in range(0,1000):
+if random.choice(door) == 'G'
+c_list = ['G', 'C']
+del c_list[0]
+s+=1
+else :
+c_list = ['G', 'G']
+del c_list[0]
+f+=1
+
+if s>f :
+print("change")
+else:
+print("unchange")
