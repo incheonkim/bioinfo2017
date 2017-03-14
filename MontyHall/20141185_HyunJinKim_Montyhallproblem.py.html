@@ -1,0 +1,37 @@
+
+# coding: utf-8
+
+# In[16]:
+
+count = 0
+tries = 1000
+import random
+door_list = ['a','b','c']
+for i in range(0,tries):
+    car = random.choice(door_list)
+    choice = random.choice(door_list)
+    
+    my_list = ['a','b','c']
+    
+    if car == choice:
+        my_list.remove(choice)
+    else:
+        my_list.remove(choice)
+        my_list.remove(car)
+    
+    door_open = random.choice(my_list)
+    
+    if len(my_list) == 1:
+        #success
+        count+=1
+    else:
+        #fail
+        count = count
+        
+print('possibility to get car when you change your choice =', count/tries*100)
+
+
+# In[ ]:
+
+
+
